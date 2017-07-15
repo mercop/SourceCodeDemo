@@ -1,4 +1,4 @@
-package main.java.com.marving.code.java.lang;
+package com.marving.code.java.lang;
 
 import org.junit.Test;
 

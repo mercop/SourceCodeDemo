@@ -1,4 +1,4 @@
-package main.java.com.marving.code.java.collection;
+package com.marving.code.java.collection;
 
 import org.junit.Test;
 
@@ -49,7 +49,18 @@ public class MapDemo {
 
     @Test
     public void testLinkedHashMap(){
+        LinkedHashMap<String,String> linkedHashMap =
+                new LinkedHashMap<String,String>(16,0.75f,true);
+        linkedHashMap.put("a","1");
+        linkedHashMap.put("b","2");
+        linkedHashMap.put("c","3");
+        linkedHashMap.put("d","4");
+        System.out.println("访问前：");
+        System.out.println(linkedHashMap);
+        //access items
+        linkedHashMap.get("a");
 
+        System.out.println(linkedHashMap);
     }
 
     @Test
