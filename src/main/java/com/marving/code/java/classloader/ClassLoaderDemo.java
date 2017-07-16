@@ -1,4 +1,4 @@
-package com.marving.code.java.lang;
+package com.marving.code.java.classloader;
 
 import org.junit.Test;
 
