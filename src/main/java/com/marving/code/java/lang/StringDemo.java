@@ -43,8 +43,6 @@ public class StringDemo {
 
     public static void main(String[] args) {
 
-
-
         System.out.println(d == e);
         System.out.println(d == f);
         System.out.println(d == g);
@@ -54,8 +52,6 @@ public class StringDemo {
         System.out.println(d == i);
 
         StringDemo stringDemo = new StringDemo();
-
         System.out.println(d == stringDemo.j);
     }
-
 }
