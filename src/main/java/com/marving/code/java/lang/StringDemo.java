@@ -1,7 +1,7 @@
 package com.marving.code.java.lang;
 
-
 /**
+ *
  *  jvm编译时优化原理,jvm有常量池，常量计算在编译时就已经获得结果，如"a"+"b"编译后字节码中只有“ab”常量，
  *  运行时直接赋值,方法中的返回值不能确定，new String(“ab”)新建对象也是运行时决定，也当作变量，final修饰的对象，
  *  引用只能被赋值一次，如果编译时不能确定赋值的内容，也当作变量，变量会在运行时新建对象赋值。
@@ -16,6 +16,7 @@ package com.marving.code.java.lang;
  *  String赋值   用“+”不一定比StringBuffer.append()慢，因为常量相加在编译时就计算好结果了，而append()需要在运行时计算。
  */
 public class StringDemo {
+
     static String a = "a";
     static String b = "b";
     final static String c = "a";
