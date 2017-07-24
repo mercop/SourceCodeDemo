@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09db5a0a-62bd-459e-a4a6-a5bae947b342" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/marving/code/java/lang/RuntimeDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/marving/code/java/lang/SystemDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/marving/code/java/newfeature18/FunctionReferenceDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/marving/code/java/newfeature18/InBuildFunction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/marving/code/java/concurrent/CountDownLatchDemo.java" afterPath="$PROJECT_DIR$/src/main/java/com/marving/code/java/concurrent/CountDownLatchDemo.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -646,7 +641,7 @@
       <option name="presentableId" value="Default" />
       <updated>1497836569737</updated>
       <workItem from="1500772086574" duration="2467000" />
-      <workItem from="1500884250314" duration="10984000" />
+      <workItem from="1500884250314" duration="12101000" />
     </task>
     <task id="LOCAL-00001" summary="2017年7月15日 - update">
       <created>1500087961716</created>
@@ -732,7 +727,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500894891546</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add 1.8 new feature demo">
+      <created>1500908634949</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1500908634949</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -768,7 +770,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13451000" />
+    <option name="totallyTimeSpent" value="14568000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1444" height="867" extended-state="0" />
