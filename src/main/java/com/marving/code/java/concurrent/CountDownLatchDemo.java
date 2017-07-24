@@ -8,9 +8,7 @@ import java.util.concurrent.CountDownLatch;
  */
 public class CountDownLatchDemo {
     private static int SIZE = 5;
-
     private static CountDownLatch countDownLatch;
-
     private static CountDownLatch start;
 
     public static void main(String[] args) throws InterruptedException {
