@@ -6,6 +6,7 @@ import java.util.Date;
 
 /**
  * Created by mercop on 2017/7/24.
+ * 简单日期格式
  */
 
 public class SimpleDateFormatDemo {

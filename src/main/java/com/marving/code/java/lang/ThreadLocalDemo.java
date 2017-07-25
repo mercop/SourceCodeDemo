@@ -60,4 +60,50 @@ public class ThreadLocalDemo {
         threadId.set(threadId.get() + addId);
         return threadId.get();
     }
+
+
+    @Test
+    public void test(){
+        System.out.println();
+        new Thread(()->{
+            Message message = new Message();
+            message.setDate("123");
+            MyUtil.setMessage(message);
+            new MessageConsumer().print();
+        }).start();
+
+        new Thread(()->{
+            Message message = new Message();
+            message.setDate("456");
+            MyUtil.setMessage(message);
+            new MessageConsumer().print();
+        }).start();
+    }
+}
+
+class Message{
+    public String date;
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+}
+
+class MessageConsumer{
+    public void print(){
+        System.out.println(Thread.currentThread().getName() + " = " + MyUtil.getMessage().date);
+    }
+}
+
+class MyUtil{
+
+    private static ThreadLocal<Message> threadLocal = new ThreadLocal<>();
+
+    public static Message getMessage(){
+        return threadLocal.get();
+    }
+
+    public static void setMessage(Message message){
+        threadLocal.set(message);
+    }
 }

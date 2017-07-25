@@ -8,6 +8,7 @@ import java.util.Map;
 
 /**
  * Created by mercop on 2017/7/15.
+ * LRU Cache 实现
  */
 public class LRUCache<K,V> extends LinkedHashMap<K,V>{
 
