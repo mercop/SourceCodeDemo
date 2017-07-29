@@ -48,28 +48,28 @@ public class RegexDemo {
 
 
     @Test
-    public void testStringReplace(){
+    public void testStringReplace() {
         //取出字母
         String str = "asd234914jksajfd@(#*(*(@#*!(@#!jkJSDKFASJDLKASJDALDLKASDA";
         String regex = "[^a-zA-Z]";
-        System.out.println(str.replaceAll(regex,""));
+        System.out.println(str.replaceAll(regex, ""));
     }
 
     @Test
-    public void testStringSplit(){
+    public void testStringSplit() {
         //根据数字拆分
         String str = "a1s2f3g4nh5nb6mjk76n7n6nm6n6k87n8k";
         String[] result = str.split("\\d+");
-        for(String str1 : result)
+        for (String str1 : result)
             System.out.print(str1 + " ");
     }
 
     @Test
-    public void testNum(){
+    public void testNum() {
         //数字匹配
         String str = "121313.2323";
         String regex = "\\d+(\\.\\d+)?";//整数或小数
-        if(str.matches(regex)){
+        if (str.matches(regex)) {
             double data = Double.parseDouble(str);
             System.out.println(data);
         }
@@ -81,11 +81,11 @@ public class RegexDemo {
         String regex = "\\d{4}-\\d{2}-\\d{2}";
         String regex2 = "\\d{4}-\\d{2}-\\d{2}\\s\\d{2}:\\d{2}:\\d{2}";
 
-        if(str.matches(regex)){
+        if (str.matches(regex)) {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
             Date date = simpleDateFormat.parse(str);
             System.out.println(date);
-        } else if(str.matches(regex2)){
+        } else if (str.matches(regex2)) {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:ss:SSS");
             Date date = simpleDateFormat.parse(str);
             System.out.println(date);
@@ -94,21 +94,21 @@ public class RegexDemo {
 
 
     @Test
-    public void testTel(){
+    public void testTel() {
         //String str = "2836670";       //regex = \d{7,8}
         //String str = "0282836670";    //regex = (\d{3,4})?\d{7,8}
         String str = "(028)-2836670";   //regex = ((\(\d{3,4}\))-)?(\d{3,4})?\d{7,8}
         String regex = "((\\(\\d{3,4}\\))-\\d{7,8})|(\\d{3,4})?\\d{7,8}";
-        if(str.matches(regex)){
+        if (str.matches(regex)) {
             System.out.println("电话号码匹配成功：" + str);
         }
     }
 
     @Test
-    public void testEmail(){
-        String str = "mer@live.com";    //simple regex = \w+@\w+\.\w+
+    public void testEmail() {
+        String str = "mer@live.net";    //simple regex = \w+@\w+\.\w+
         String regex = "\\w+@\\w+\\.\\w+";
-        if(str.matches(regex)){
+        if (str.matches(regex)) {
             System.out.println("邮箱地址匹配成功：" + str);
         }
 
@@ -117,20 +117,20 @@ public class RegexDemo {
         String str2 = "merop-ab1.asd@live.com";
 
         String regex2 = "[a-zA-Z][0-9a-zA-Z_\\-.]{5,14}@[0-9a-zA-Z_\\-.]+\\.com|cn|org|net";
-        if(str2.matches(regex2)){
+        if (str2.matches(regex2)) {
             System.out.println("邮箱地址匹配成功：" + str2);
         }
     }
 
 
     @Test
-    public void testPattern(){
+    public void testPattern() {
 
-        String str ="a|b|c";
+        String str = "a|b|c";
         String regex = "\\|";
         Pattern pattern = Pattern.compile(regex);
         String[] result = pattern.split(str);
-        for(String str1 : result)
+        for (String str1 : result)
             System.out.print(str1 + " ");
 
         String regex2 = "(\\w\\|){2}.";
@@ -144,12 +144,12 @@ public class RegexDemo {
 
     @Test
     //Pattern 的使用场景
-    public void testSplitMybatisSql(){
+    public void testSplitMybatisSql() {
         String str = "INSERT INTO member(id,name,age) VALUES (#{member.id},#{member.name},#{member.age})";
         String regex = "#\\{[a-zA-Z0-9_.]+\\}";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(str);
-        while(matcher.find()){
+        while (matcher.find()) {
             System.out.println(matcher.group(0));
         }
     }

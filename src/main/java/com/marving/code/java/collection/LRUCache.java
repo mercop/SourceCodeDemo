@@ -2,9 +2,7 @@ package com.marving.code.java.collection;
 
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by mercop on 2017/7/15.
