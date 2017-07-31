@@ -1,14 +1,21 @@
 package com.marving.code.java.concurrent;
 
+import org.junit.Test;
+
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Created by mercop on 2017/7/29.
+ *
  */
 
 public class BlockQueueDemo {
 
+    //生产消费者模式
     public static void main(String[] args) {
         BlockingQueue<MessageStore> queue = new LinkedBlockingDeque<>();
 
@@ -36,6 +43,26 @@ public class BlockQueueDemo {
                 e.printStackTrace();
             }
         }).start();
+    }
+
+    //put方法元素满的时候会await()
+    //offer方法元素满直接返回true false
+    @Test
+    public void testOfferAndPut() throws Exception {
+        LinkedBlockingDeque<MessageStore> linkedBlockingDeque = new LinkedBlockingDeque<>(2);
+
+        new Thread(()->{
+            try {
+                System.out.println("start");
+                linkedBlockingDeque.put(new MessageStore(1));
+                linkedBlockingDeque.put(new MessageStore(2));
+                linkedBlockingDeque.put(new MessageStore(3));
+                System.out.println("finished");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
+
     }
 }
 
