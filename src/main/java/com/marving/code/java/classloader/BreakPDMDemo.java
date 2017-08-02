@@ -31,13 +31,19 @@ class StringClassLoader extends ClassLoader{
 
     @Override
     public Class<?> loadClass(String name) throws ClassNotFoundException {
-        Class<?> clazz = Class.forName(name);
+        //Class<?> clazz = Class.forName(name);
+        Class<?>  clazz = findClass(name);
+        if(clazz == null)
+            clazz = super.loadClass(name);
         return clazz;
     }
 
     @Override
     protected Class<?> findClass(String name) throws ClassNotFoundException {
         String fileName = getFileName(name);
+
+        if(name.indexOf("Object") >= 0)
+            return Object.class;
 
         File file = new File("H:\\lib", fileName);
 
