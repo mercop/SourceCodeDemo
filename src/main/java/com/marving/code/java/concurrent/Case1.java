@@ -53,7 +53,6 @@ public class Case1 {
                     e.printStackTrace();
                 }  finally {
                     System.out.println(Thread.currentThread().getName() + " Job finished");
-                    coutDownLatch.countDown();
                 }
             });
             threadList.add(thread);

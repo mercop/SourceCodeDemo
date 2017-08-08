@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Created by mercop on 2017/8/1.
@@ -41,7 +42,6 @@ class StringClassLoader extends ClassLoader{
     @Override
     protected Class<?> findClass(String name) throws ClassNotFoundException {
         String fileName = getFileName(name);
-
         if(name.indexOf("Object") >= 0)
             return Object.class;
 
